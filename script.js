@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initializeScrollAnimations();
   initializeWaitlistForm();
   initializeMobileMenu();
-  initializeHeroAnimation();   // ← Added for reliable hero animation on Vercel
 });
 
 /**
@@ -278,58 +277,4 @@ function copyToClipboard(text) {
   });
 }
 
-/**
- * Hero Headline Animation (JS-triggered for reliability on Vercel/production)
- */
-function initializeHeroAnimation() {
-  const line1 = document.querySelector('.hero-line-1');
-  const line2 = document.querySelector('.hero-line-2');
-  const engineered = document.querySelector('.animate-engineered');
-  const subtext = document.querySelector('.hero-subtext');
-
-  if (!line1 || !line2) return;
-
-  // Reset initial state
-  line1.style.opacity = '0';
-  line1.style.transform = 'translateY(25px)';
-  line2.style.opacity = '0';
-  line2.style.transform = 'translateY(25px)';
-
-  if (engineered) {
-    engineered.style.opacity = '0';
-    engineered.style.transform = 'translateY(20px) scale(0.94)';
-  }
-  if (subtext) {
-    subtext.style.opacity = '0';
-    subtext.style.transform = 'translateY(15px)';
-  }
-
-  // Trigger animations with stagger
-  setTimeout(() => {
-    line1.style.transition = 'all 1.1s cubic-bezier(0.23, 1, 0.32, 1)';
-    line1.style.opacity = '1';
-    line1.style.transform = 'translateY(0)';
-  }, 180);
-
-  setTimeout(() => {
-    line2.style.transition = 'all 1.1s cubic-bezier(0.23, 1, 0.32, 1)';
-    line2.style.opacity = '1';
-    line2.style.transform = 'translateY(0)';
-  }, 520);
-
-  if (engineered) {
-    setTimeout(() => {
-      engineered.style.transition = 'all 1.4s cubic-bezier(0.23, 1, 0.32, 1)';
-      engineered.style.opacity = '1';
-      engineered.style.transform = 'translateY(0) scale(1)';
-    }, 680);
-  }
-
-  if (subtext) {
-    setTimeout(() => {
-      subtext.style.transition = 'all 1s cubic-bezier(0.23, 1, 0.32, 1)';
-      subtext.style.opacity = '1';
-      subtext.style.transform = 'translateY(0)';
-    }, 920);
-  }
-}
+// Hero animation is now pure CSS (more reliable on Vercel)

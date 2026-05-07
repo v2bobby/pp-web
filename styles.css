@@ -284,19 +284,62 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Hero elements start hidden for JS-controlled animation (more reliable on Vercel) */
+/* === Hero Headline Animation (Pure CSS - Reliable on Vercel) === */
 .hero-line-1,
 .hero-line-2,
 .hero-subtext,
 .animate-engineered {
+  opacity: 0;
+  transform: translateY(25px);
   will-change: transform, opacity;
 }
 
-/* Hero Headline Animation */
+.hero-line-1 {
+  animation: heroFadeUp 1.1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-line-2 {
+  animation: heroFadeUp 1.1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: 0.55s;
+}
+
 .animate-engineered {
-  display: inline-block;
-  animation: engineeredPop 1.2s cubic-bezier(0.23, 1, 0.32, 1) both;
-  animation-delay: 420ms;
+  animation: engineeredPop 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: 0.75s;
+}
+
+.hero-subtext {
+  animation: heroFadeUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: 1.1s;
+}
+
+@keyframes heroFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes engineeredPop {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.94);
+    color: #18181B;
+  }
+  40% {
+    color: #EA580C;
+    transform: translateY(-3px) scale(1.04);
+  }
+  70% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    color: #EA580C;
+  }
+}
 }
 
 @keyframes engineeredPop {
