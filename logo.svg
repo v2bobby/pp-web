@@ -1,0 +1,25 @@
+<svg width="280" height="52" viewBox="0 0 280 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- New Orange Theme Logo - Warm, appetizing, premium -->
+  <g>
+    <!-- Icon: Clean circle with warm orange nodes -->
+    <circle cx="26" cy="26" r="21" stroke="#EA580C" stroke-width="2.5"/>
+    <circle cx="26" cy="26" r="12" stroke="#EA580C" stroke-width="1.5" stroke-opacity="0.55"/>
+    <!-- Three flavor intelligence nodes -->
+    <circle cx="18" cy="20" r="3" fill="#EA580C"/>
+    <circle cx="26" cy="32" r="3" fill="#EA580C"/>
+    <circle cx="34" cy="20" r="3" fill="#EA580C"/>
+    <!-- Subtle connecting arcs -->
+    <path d="M18 20 Q26 26 34 20" stroke="#EA580C" stroke-width="1.3" stroke-opacity="0.65" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Wordmark - Bold and confident -->
+  <text x="62" y="34" 
+        font-family="Space Grotesk, Inter, system-ui, -apple-system, sans-serif" 
+        font-size="29" 
+        font-weight="600" 
+        fill="#18181B" 
+        letter-spacing="-1.3">PurePalate</text>
+  
+  <!-- Orange accent line -->
+  <rect x="178" y="38" width="52" height="2" rx="1" fill="#EA580C"/>
+</svg>
