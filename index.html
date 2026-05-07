@@ -11,9 +11,259 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet">
   
-  <!-- Tailwind -->
+  <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css?v=3">
+  
+  <style>
+    /* === PurePalate Premium Styles (Single File Version) === */
+    :root {
+      --bg: #FFFFFF;
+      --bg-alt: #FAFAF9;
+      --accent: #EA580C;
+      --accent-dark: #C2410C;
+      --text: #18181B;
+      --text-secondary: #3F3F46;
+      --text-muted: #52525B;
+      --border: #E5E5E5;
+      --success: #16A34A;
+      --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .display {
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+
+    h1 {
+      font-size: clamp(3.9rem, 9.5vw, 7.2rem);
+      line-height: 0.88;
+      letter-spacing: -0.055em;
+    }
+
+    .nav {
+      background-color: rgba(255,255,255,0.96);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-link {
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-link:hover {
+      color: var(--text);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 34px;
+      font-weight: 600;
+      font-size: 0.97rem;
+      letter-spacing: -0.01em;
+      border-radius: 9999px;
+      transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+      text-decoration: none;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: white;
+      box-shadow: 0 10px 15px -3px rgb(234 88 12 / 0.3);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 20px 25px -5px rgb(234 88 12 / 0.35);
+    }
+
+    .btn-secondary {
+      background-color: white;
+      color: var(--text);
+      border: 1.5px solid #E5E5E5;
+    }
+
+    .btn-secondary:hover {
+      background-color: #FAFAF9;
+      border-color: #D4D4D4;
+      transform: translateY(-1px);
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.04);
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.06);
+      border-color: #E5E5E5;
+    }
+
+    .card-feature {
+      background-color: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.25rem;
+      transition: all 0.3s ease;
+    }
+
+    .card-feature:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .feature-icon {
+      width: 54px;
+      height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFF7ED;
+      border-radius: 14px;
+      color: var(--accent);
+      transition: all 0.3s ease;
+    }
+
+    .card-feature:hover .feature-icon {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    .input {
+      background-color: white;
+      border: 1.5px solid #E5E5E5;
+      color: var(--text);
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    .input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.1);
+    }
+
+    .monogram {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: white;
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      box-shadow: 0 10px 15px -3px rgb(234 88 12 / 0.3);
+    }
+
+    /* === Hero Headline Animation === */
+    .hero-line-1,
+    .hero-line-2,
+    .hero-subtext,
+    .animate-engineered {
+      opacity: 0;
+      transform: translateY(25px);
+      will-change: transform, opacity;
+    }
+
+    .hero-line-1 {
+      animation: heroFadeUp 1.1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      animation-delay: 0.2s;
+    }
+
+    .hero-line-2 {
+      animation: heroFadeUp 1.1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      animation-delay: 0.55s;
+    }
+
+    .animate-engineered {
+      animation: engineeredPop 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      animation-delay: 0.75s;
+    }
+
+    .hero-subtext {
+      animation: heroFadeUp 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+      animation-delay: 1.1s;
+    }
+
+    @keyframes heroFadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes engineeredPop {
+      0% {
+        opacity: 0;
+        transform: translateY(22px) scale(0.94);
+        color: #18181B;
+      }
+      40% {
+        color: #EA580C;
+        transform: translateY(-3px) scale(1.04);
+      }
+      70% {
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        color: #EA580C;
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body class="bg-white text-[#18181B]">
 
@@ -21,7 +271,7 @@
   <nav class="nav fixed top-0 left-0 right-0 z-50 border-b border-[#E5E5E5] bg-white/95 backdrop-blur-lg">
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
       <a href="#" class="flex items-center">
-        <!-- Inline Logo (no external asset dependency) -->
+        <!-- Inline Logo -->
         <svg width="140" height="26" viewBox="0 0 280 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-6 w-auto">
           <g>
             <circle cx="26" cy="26" r="21" stroke="#EA580C" stroke-width="2.5"/>
@@ -47,7 +297,6 @@
         <a href="#waitlist" class="btn btn-primary text-sm px-7 py-2.5">Join Waitlist</a>
       </div>
 
-      <!-- Mobile -->
       <button id="mobile-menu-btn" class="md:hidden p-2">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -75,7 +324,7 @@
         NIGERIA • 2026
       </div>
 
-      <h1 class="display max-w-[16ch] mx-auto leading-[0.88] tracking-[-0.055em] mb-6" style="font-size: clamp(3.9rem, 9.5vw, 7.2rem);">
+      <h1 class="display max-w-[15ch] mx-auto leading-[0.86] tracking-[-0.06em] mb-6" style="font-size: clamp(4.4rem, 10.5vw, 8.5rem);">
         <span class="hero-line-1">Natural flavor.</span><br>
         <span class="hero-line-2">
           <span class="text-[#EA580C] animate-engineered">Engineered</span> 
@@ -97,7 +346,7 @@
     </div>
   </section>
 
-  <!-- VALUE PROPOSITION BOX -->
+  <!-- VALUE PROPOSITION -->
   <section class="max-w-5xl mx-auto px-6 pt-16 pb-12">
     <div class="border border-[#E5E5E5] rounded-3xl p-10 md:p-14 bg-white shadow-sm">
       <div class="max-w-3xl">
@@ -111,12 +360,9 @@
   <!-- VISION / PROBLEM + SOLUTION -->
   <section id="vision" class="max-w-7xl mx-auto px-6 pb-16">
     <div class="grid md:grid-cols-2 gap-6">
-      
-      <!-- Problem Box -->
       <div class="border border-[#E5E5E5] rounded-3xl p-9 md:p-11 bg-[#FFF7ED]">
         <div class="uppercase tracking-[2px] text-xs font-semibold text-[#C2410C] mb-4">THE OLD PARADIGM</div>
         <h3 class="display text-3xl tracking-tight mb-8">An impossible choice.</h3>
-        
         <div class="space-y-8">
           <div>
             <div class="font-semibold mb-1.5">Artificial Shortcuts</div>
@@ -129,13 +375,10 @@
         </div>
       </div>
 
-      <!-- Solution Box -->
       <div class="border-2 border-[#EA580C] rounded-3xl p-9 md:p-11 bg-white">
         <div class="uppercase tracking-[2px] text-xs font-semibold text-[#EA580C] mb-4">PUREPALATE</div>
         <h3 class="display text-3xl tracking-tight mb-6">The Third Way.</h3>
-        
         <p class="text-premium mb-8">We deliver biologically clean convenience. Natural umami. Zero MSG. Significant time reclaimed.</p>
-        
         <div class="pt-6 border-t border-[#E5E5E5]">
           <div class="flex items-start gap-4">
             <div class="text-[#EA580C] mt-1">↑</div>
@@ -157,7 +400,6 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
-      <!-- Spice Systems Box -->
       <div class="card p-9 md:p-11">
         <div class="flex items-center gap-x-4 mb-6">
           <div class="feature-icon">
@@ -174,7 +416,6 @@
         <div class="mt-8 text-xs text-[#52525B] tracking-wider">ZERO MSG • 100% NATURAL • CLINICAL-GRADE</div>
       </div>
 
-      <!-- Ready Pantry Box -->
       <div class="card p-9 md:p-11">
         <div class="flex items-center gap-x-4 mb-6">
           <div class="feature-icon">
@@ -201,7 +442,6 @@
     </div>
 
     <div class="grid md:grid-cols-3 gap-6">
-      <!-- Feature 1 -->
       <div class="card-feature">
         <div class="feature-icon mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -212,7 +452,6 @@
         <p class="text-premium text-sm">Build detailed household Flavor Profiles. Our system recommends spice and staple combinations tailored to specific health needs — hypertensive parents, growing children, or performance-focused adults.</p>
       </div>
 
-      <!-- Feature 2 -->
       <div class="card-feature">
         <div class="feature-icon mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -223,7 +462,6 @@
         <p class="text-premium text-sm">Subscribe to monthly PurePacks — intelligently curated staples delivered through optimized logistics. Your pantry stays stocked. Your cooking stays clean.</p>
       </div>
 
-      <!-- Feature 3 -->
       <div class="card-feature">
         <div class="feature-icon mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -249,13 +487,11 @@
             <span class="text-3xl font-semibold tracking-tight">Lateefat Imam Bello</span>
           </div>
           <div class="text-[#EA580C] font-medium tracking-tight mb-6">Founder &amp; Visionary</div>
-          
           <p class="text-premium max-w-prose mb-8">
             Lateefat founded PurePalate to restore integrity and joy to Nigerian kitchens at scale. 
             By combining deep respect for traditional food wisdom with cutting-edge technology, 
             she is building the operating system for conscious African households.
           </p>
-
           <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
             <a href="mailto:lateefat.bello@purepalate.top" class="flex items-center gap-x-2 text-[#3F3F46] hover:text-black">
               lateefat.bello@purepalate.top
@@ -269,7 +505,7 @@
     </div>
   </section>
 
-  <!-- WAITLIST BOX -->
+  <!-- WAITLIST -->
   <section id="waitlist" class="max-w-3xl mx-auto px-6 pb-20">
     <div class="border-2 border-[#EA580C] rounded-3xl p-10 md:p-14 text-center bg-white">
       <div class="text-[#EA580C] text-xs tracking-[2px] font-semibold mb-3">EARLY ACCESS</div>
@@ -278,7 +514,6 @@
 
       <form id="waitlist-form" class="max-w-sm mx-auto space-y-4">
         <input type="email" placeholder="your@email.com" required class="input w-full">
-        
         <select class="input w-full">
           <option value="">What matters most to you?</option>
           <option>Family health &amp; wellness</option>
@@ -286,7 +521,6 @@
           <option>Preserving authentic Nigerian flavor</option>
           <option>Eliminating artificial additives</option>
         </select>
-
         <button type="submit" class="btn btn-primary w-full py-4 text-base">Join the Pure Circle</button>
       </form>
 
@@ -310,6 +544,108 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Tailwind Config
+    function initializeTailwind() {
+      if (typeof tailwind !== 'undefined') {
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                'display': ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+                'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+              }
+            }
+          }
+        };
+      }
+    }
+
+    // Navigation
+    function initializeNavigation() {
+      const nav = document.querySelector('nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 80) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href').substring(1);
+          const target = document.getElementById(targetId);
+          if (target) {
+            e.preventDefault();
+            const navHeight = nav.offsetHeight;
+            const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 20;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        });
+      });
+    }
+
+    // Scroll Reveal
+    function initializeScrollAnimations() {
+      const reveals = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        reveals.forEach(el => el.classList.add('visible'));
+        return;
+      }
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach(el => observer.observe(el));
+    }
+
+    // Waitlist Form
+    function initializeWaitlistForm() {
+      const form = document.getElementById('waitlist-form');
+      const success = document.getElementById('success-state');
+      if (!form) return;
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = form.querySelector('button');
+        btn.disabled = true;
+        btn.innerHTML = 'Securing your place...';
+
+        setTimeout(() => {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        }, 900);
+      });
+    }
+
+    // Mobile Menu
+    function initializeMobileMenu() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => menu.classList.add('hidden'));
+      });
+    }
+
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeTailwind();
+      initializeNavigation();
+      initializeScrollAnimations();
+      initializeWaitlistForm();
+      initializeMobileMenu();
+    });
+  </script>
 </body>
 </html>
