@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PurePalate • The Future of Natural Flavor</title>
+  <meta name="description" content="PurePalate — Tech-enabled natural flavor for Nigerian homes. Zero MSG. Intelligent convenience.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet">
+  
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-[#18181B]">
+
+  <!-- NAV -->
+  <nav class="nav fixed top-0 left-0 right-0 z-50 border-b border-[#E5E5E5] bg-white/95 backdrop-blur-lg">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <a href="#" class="flex items-center">
+        <img src="assets/logo.svg" alt="PurePalate" class="h-9">
+      </a>
+
+      <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+        <a href="#vision" class="nav-link">Vision</a>
+        <a href="#ecosystem" class="nav-link">Ecosystem</a>
+        <a href="#intelligence" class="nav-link">Intelligence</a>
+        <a href="#founder" class="nav-link">Founder</a>
+      </div>
+
+      <div class="hidden md:block">
+        <a href="#waitlist" class="btn btn-primary text-sm px-7 py-2.5">Join Waitlist</a>
+      </div>
+
+      <!-- Mobile -->
+      <button id="mobile-menu-btn" class="md:hidden p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 py-6 border-t bg-white">
+      <div class="flex flex-col gap-y-4 text-base font-medium">
+        <a href="#vision" class="py-1">Vision</a>
+        <a href="#ecosystem" class="py-1">Ecosystem</a>
+        <a href="#intelligence" class="py-1">Intelligence</a>
+        <a href="#founder" class="py-1">Founder</a>
+        <a href="#waitlist" class="btn btn-primary w-full justify-center mt-2">Join Waitlist</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="pt-20 pb-16 border-b border-[#E5E5E5]">
+    <div class="max-w-5xl mx-auto px-6 pt-16 text-center">
+      <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-full border border-[#E5E5E5] mb-8 text-xs tracking-[1.5px] font-medium text-[#3F3F46]">
+        <div class="w-1.5 h-1.5 bg-[#EA580C] rounded-full animate-pulse"></div>
+        NIGERIA • 2026
+      </div>
+
+      <h1 class="display max-w-[16ch] mx-auto leading-[0.88] tracking-[-0.055em] mb-6" style="font-size: clamp(3.9rem, 9.5vw, 7.2rem);">
+        <span class="hero-line-1">Natural flavor.</span><br>
+        <span class="hero-line-2">
+          <span class="text-[#EA580C] animate-engineered">Engineered</span> 
+          <span class="hero-subtext">for modern life.</span>
+        </span>
+      </h1>
+
+      <p class="max-w-lg mx-auto text-xl text-[#3F3F46] mb-10">
+        We are building the intelligent infrastructure for 100% natural, 
+        zero-MSG cooking across Nigerian households.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#waitlist" class="btn btn-primary text-base px-9 py-4">Secure Early Access</a>
+        <a href="#vision" class="btn btn-secondary text-base px-9 py-4">Explore the Vision</a>
+      </div>
+
+      <div class="mt-10 text-xs tracking-[2px] text-[#52525B]">COMING Q4 2026</div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPOSITION BOX -->
+  <section class="max-w-5xl mx-auto px-6 pt-16 pb-12">
+    <div class="border border-[#E5E5E5] rounded-3xl p-10 md:p-14 bg-white shadow-sm">
+      <div class="max-w-3xl">
+        <div class="text-[#EA580C] text-xs tracking-[2px] font-semibold mb-3">THE THIRD WAY</div>
+        <h2 class="display text-4xl leading-none tracking-tight mb-6">Convenience without compromise.<br>Health without sacrifice.</h2>
+        <p class="text-premium">We fuse ancestral Nigerian processing wisdom with modern distribution intelligence to deliver clean, flavorful staples that respect both your time and your biology.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION / PROBLEM + SOLUTION -->
+  <section id="vision" class="max-w-7xl mx-auto px-6 pb-16">
+    <div class="grid md:grid-cols-2 gap-6">
+      
+      <!-- Problem Box -->
+      <div class="border border-[#E5E5E5] rounded-3xl p-9 md:p-11 bg-[#FFF7ED]">
+        <div class="uppercase tracking-[2px] text-xs font-semibold text-[#C2410C] mb-4">THE OLD PARADIGM</div>
+        <h3 class="display text-3xl tracking-tight mb-8">An impossible choice.</h3>
+        
+        <div class="space-y-8">
+          <div>
+            <div class="font-semibold mb-1.5">Artificial Shortcuts</div>
+            <p class="text-sm text-[#3F3F46]">MSG-laden cubes and chemical sweeteners deliver speed at the cost of long-term health.</p>
+          </div>
+          <div>
+            <div class="font-semibold mb-1.5">Preparation Fatigue</div>
+            <p class="text-sm text-[#3F3F46]">Hours spent peeling, milling, and soaking is unsustainable for modern families.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution Box -->
+      <div class="border-2 border-[#EA580C] rounded-3xl p-9 md:p-11 bg-white">
+        <div class="uppercase tracking-[2px] text-xs font-semibold text-[#EA580C] mb-4">PUREPALATE</div>
+        <h3 class="display text-3xl tracking-tight mb-6">The Third Way.</h3>
+        
+        <p class="text-premium mb-8">We deliver biologically clean convenience. Natural umami. Zero MSG. Significant time reclaimed.</p>
+        
+        <div class="pt-6 border-t border-[#E5E5E5]">
+          <div class="flex items-start gap-4">
+            <div class="text-[#EA580C] mt-1">↑</div>
+            <div>
+              <span class="font-semibold">Seamless Health</span><br>
+              <span class="text-sm text-[#3F3F46]">Flavor density meets clinical-grade natural processing.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT ECOSYSTEM -->
+  <section id="ecosystem" class="max-w-7xl mx-auto px-6 pb-16">
+    <div class="mb-10">
+      <div class="text-[#EA580C] text-xs tracking-[2px] font-semibold mb-2">THE PUREPALATE ECOSYSTEM</div>
+      <h2 class="display text-4xl tracking-tight">Two pillars.<br>One promise.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Spice Systems Box -->
+      <div class="card p-9 md:p-11">
+        <div class="flex items-center gap-x-4 mb-6">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 01-3.86.517l-.318-.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-xs tracking-widest text-[#EA580C] font-medium">FLAVOR-FIRST</div>
+            <h3 class="text-2xl font-semibold tracking-tight">Spice Systems</h3>
+          </div>
+        </div>
+        <p class="text-premium">Precision-formulated blends of dehydrated vegetables, roots, and traditional spices that deliver authentic, layered umami. A clinical-grade replacement for artificial cubes.</p>
+        <div class="mt-8 text-xs text-[#52525B] tracking-wider">ZERO MSG • 100% NATURAL • CLINICAL-GRADE</div>
+      </div>
+
+      <!-- Ready Pantry Box -->
+      <div class="card p-9 md:p-11">
+        <div class="flex items-center gap-x-4 mb-6">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <div>
+            <div class="text-xs tracking-widest text-[#EA580C] font-medium">READY-TO-COOK</div>
+            <h3 class="text-2xl font-semibold tracking-tight">Pure Pantry Staples</h3>
+          </div>
+        </div>
+        <p class="text-premium">Eliminate the 45-minute prep tax. Our peeled, milled bean flours and pure tuber flours let you cook traditional staples in minutes — while preserving nutrition and removing all additives.</p>
+        <div class="mt-8 text-xs text-[#52525B] tracking-wider">UP TO 45 MIN SAVED • LOW-GLYCEMIC • NO ADDITIVES</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTELLIGENCE LAYER -->
+  <section id="intelligence" class="max-w-7xl mx-auto px-6 pb-16">
+    <div class="mb-10">
+      <div class="text-[#EA580C] text-xs tracking-[2px] font-semibold mb-2">THE INTELLIGENCE LAYER</div>
+      <h2 class="display text-4xl tracking-tight">Not just food.<br>A platform for wellness.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Feature 1 -->
+      <div class="card-feature">
+        <div class="feature-icon mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-xl tracking-tight mb-3">Personal Flavor Profiles</h3>
+        <p class="text-premium text-sm">Build detailed household Flavor Profiles. Our system recommends spice and staple combinations tailored to specific health needs — hypertensive parents, growing children, or performance-focused adults.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="card-feature">
+        <div class="feature-icon mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-xl tracking-tight mb-3">Continuity Subscription</h3>
+        <p class="text-premium text-sm">Subscribe to monthly PurePacks — intelligently curated staples delivered through optimized logistics. Your pantry stays stocked. Your cooking stays clean.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="card-feature">
+        <div class="feature-icon mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M9.663 17.664l.02.02M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+        </div>
+        <h3 class="font-semibold text-xl tracking-tight mb-3">Kitchen Assist <span class="text-xs align-super text-[#EA580C]">(2027+)</span></h3>
+        <p class="text-premium text-sm">Our upcoming AI layer will understand your current PurePalate inventory and generate context-aware recipes optimized for time, nutrition, and flavor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section id="founder" class="max-w-5xl mx-auto px-6 pb-16">
+    <div class="border border-[#E5E5E5] rounded-3xl p-10 md:p-14">
+      <div class="flex flex-col md:flex-row gap-10 items-start">
+        <div>
+          <div class="monogram mb-6">LIB</div>
+        </div>
+        <div class="flex-1">
+          <div class="mb-1">
+            <span class="text-3xl font-semibold tracking-tight">Lateefat Imam Bello</span>
+          </div>
+          <div class="text-[#EA580C] font-medium tracking-tight mb-6">Founder &amp; Visionary</div>
+          
+          <p class="text-premium max-w-prose mb-8">
+            Lateefat founded PurePalate to restore integrity and joy to Nigerian kitchens at scale. 
+            By combining deep respect for traditional food wisdom with cutting-edge technology, 
+            she is building the operating system for conscious African households.
+          </p>
+
+          <div class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+            <a href="mailto:lateefat.bello@purepalate.top" class="flex items-center gap-x-2 text-[#3F3F46] hover:text-black">
+              lateefat.bello@purepalate.top
+            </a>
+            <a href="https://www.linkedin.com/in/lateefat-imam-bello-740544402" target="_blank" class="flex items-center gap-x-2 text-[#3F3F46] hover:text-black">
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST BOX -->
+  <section id="waitlist" class="max-w-3xl mx-auto px-6 pb-20">
+    <div class="border-2 border-[#EA580C] rounded-3xl p-10 md:p-14 text-center bg-white">
+      <div class="text-[#EA580C] text-xs tracking-[2px] font-semibold mb-3">EARLY ACCESS</div>
+      <h2 class="display text-4xl tracking-tight mb-4">Be among the first.</h2>
+      <p class="text-premium max-w-md mx-auto mb-8">Join the founding circle. Receive priority access and exclusive updates.</p>
+
+      <form id="waitlist-form" class="max-w-sm mx-auto space-y-4">
+        <input type="email" placeholder="your@email.com" required class="input w-full">
+        
+        <select class="input w-full">
+          <option value="">What matters most to you?</option>
+          <option>Family health &amp; wellness</option>
+          <option>Reclaiming time in the kitchen</option>
+          <option>Preserving authentic Nigerian flavor</option>
+          <option>Eliminating artificial additives</option>
+        </select>
+
+        <button type="submit" class="btn btn-primary w-full py-4 text-base">Join the Pure Circle</button>
+      </form>
+
+      <div id="success-state" class="hidden mt-8">
+        <div class="text-[#EA580C] text-2xl mb-2">✓</div>
+        <div class="font-semibold">Welcome to the circle.</div>
+        <p class="text-sm text-[#3F3F46] mt-1">You’re now on the founding list.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[#E5E5E5] py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-y-4 text-sm text-[#52525B]">
+      <div>PurePalate Systems © 2026</div>
+      <div class="flex gap-x-6">
+        <a href="#">Strategy Document</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
